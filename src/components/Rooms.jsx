@@ -2,10 +2,6 @@ import React from 'react';
 
 const rooms = [
   {
-    name: 'Swimming Pool',
-    img: '/assests/contact.jpeg',
-  },
-  {
     name: 'Cottage',
     img: '/assests/cottage.jpg',
   },
@@ -24,10 +20,6 @@ const rooms = [
   {
     name: 'Family Room AC',
     img: '/assests/familyAC.jpg',
-  },
-  {
-    name: 'Large Outdoor Area',
-    img: '/assests/glimpse4.png',
   },
 ];
 
