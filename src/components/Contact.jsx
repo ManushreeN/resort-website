@@ -15,13 +15,12 @@ function Contact() {
             <p>
               <strong> Address</strong>
               <br />
-              Gokarna Rd, near Hittalmakki,
-              <br />
-              Hantalamakki, Gokarna,
+         Mantri Resort  Gokarna Hittalmakki,
+              
               <br />
               Karnataka 581344
             </p>
-            <p><strong> Phone</strong><br />01169658991</p>
+            <p><strong> Phone</strong><br />08660205501</p>
             
 
             {/* Google Map */}

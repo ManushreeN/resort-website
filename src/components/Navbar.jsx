@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-const links = ['Home', 'About', 'Rooms', 'Gallery', 'Contact'];
+const links = ['Home', 'About','Rooms', 'Gallery',  'Contact'];
 
 const scrollTo = (id) => document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' });
 

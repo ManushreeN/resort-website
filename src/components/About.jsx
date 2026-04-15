@@ -26,8 +26,8 @@ function About() {
 
           <div className="about-text">
             <p>
-              Mantri Stay Gokarna is a peaceful getaway located on Gokarna Road near Hittalmakki, Hantalamakki,
-              Gokarna, Karnataka 581344. Designed for comfort and convenience, the property offers Double AC rooms,
+              Mantri Stay Gokarna is a peaceful getaway located on Gokarna Road near Hittalmakki,
+              Gokarna, Karnataka. Designed for comfort and convenience, the property offers Double AC rooms,
               Double Non-AC rooms, and cozy cottages to suit every kind of traveler. With a large outdoor area and a
               calm natural setting, it is an ideal stay for families, couples, and groups looking to relax and recharge.
             </p>
