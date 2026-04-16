@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import { motion } from 'framer-motion';
 
 const links = ['Home', 'About','Rooms', 'Gallery',  'Contact'];
 
@@ -14,35 +13,23 @@ function Navbar() {
   };
 
   return (
-    
-    < motion.nav className="navbar"
-     initial={{ opacity: 0, y: -30 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.6, ease: 'easeOut' }}
-    >
+    <nav className="navbar">
       <a href="#home" className="logo" onClick={(e) => { e.preventDefault(); handleNavClick('home'); }}>
         <span>MANTRI STAY</span>
       </a>
 
       <ul className={`nav-links ${menuOpen ? 'open' : ''}`}>
-        {links.map((l,i) => (
-          <motion.li key={l}
-          initial={{ opacity: 0, y: -10 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, delay: 0.2 + i, ease: 'easeOut' }}
-          >
+        {links.map((l) => (
+          <li key={l}>
             <a href={`#${l.toLowerCase()}`} onClick={(e) => { e.preventDefault(); handleNavClick(l.toLowerCase()); }}>
-
               {l}
             </a>
-          </motion.li>
+          </li>
         ))}
       </ul>
 
       <div className="nav-actions">
-        <motion.a className="nav-btn" href="tel:01169658991" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.5, delay: 0.6 }}>
-          Book Now
-        </motion.a>
+        <a className="nav-btn" href="tel:01169658991">Book Now</a>
         <button
           className="menu-toggle"
           type="button"
@@ -55,7 +42,7 @@ function Navbar() {
           <span></span>
         </button>
       </div>
-    </motion.nav>
+    </nav>
   );
 }
 
