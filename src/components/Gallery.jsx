@@ -61,7 +61,7 @@ function Gallery() {
               variants={getSlideVariant(index)}
               initial="hidden"
               whileInView="visible"
-              viewport={{ once: true, amount: 0.2 }}
+              viewport={{ once: false, amount: 0.2 }}
               style={{ overflow: 'hidden' }}
               whileHover={{ scale: 1.03, transition: { duration: 0.25 } }}
             >
