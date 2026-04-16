@@ -149,7 +149,14 @@ h1, h2, h3 { font-family: 'Playfair Display', serif; }
 /* About */
 .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; margin-top: 48px; }
 .about-grid img { width: 100%; height: 400px; object-fit: cover; }
-.about-text p { color: #555; font-weight: 300; line-height: 1.9; margin-bottom: 14px; font-size: 0.95rem; }
+.about-text p {
+  font-family: 'Poppins', sans-serif;  /* ✅ ADD THIS */
+  color: #555;
+  font-weight: 300;
+  line-height: 1.9;
+  margin-bottom: 14px;
+  font-size: 0.95rem;
+}
 .features-list { font-family: 'Poppins', sans-serif; margin-top: 24px; display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
 .feat { display: flex; align-items: center; gap: 10px; font-size: 0.85rem; color: #444; }
 .feat::before { content: '•'; color: #c9a96e; font-size: 1.2rem; line-height: 1; }
