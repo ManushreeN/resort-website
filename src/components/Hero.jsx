@@ -1,13 +1,13 @@
 import React from 'react';
 import { motion } from 'framer-motion';
- 
+
 const scrollTo = (id) => document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' });
- 
+
 function Hero() {
   const heroBackground = {
     backgroundImage: `linear-gradient(rgba(10,30,30,0.6), rgba(10,30,30,0.5)), url(${process.env.PUBLIC_URL}/assests/cover.jpg?v=3)`,
   };
- 
+
   return (
     <section id="home" className="hero" style={heroBackground}>
       <div className="hero-content">
@@ -19,7 +19,7 @@ function Hero() {
         >
           Gokarna
         </motion.p>
- 
+
         <motion.h1
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
@@ -27,7 +27,7 @@ function Hero() {
         >
           Where Nature<br /><em>Feels Like Home</em>
         </motion.h1>
- 
+
         <motion.p
           className="desc"
           initial={{ opacity: 0, y: 20 }}
@@ -36,7 +36,7 @@ function Hero() {
         >
           A quiet getaway surrounded by nature, offering comfort, views, and a warm stay
         </motion.p>
- 
+
         <motion.div
           className="hero-btns"
           initial={{ opacity: 0, y: 20 }}
@@ -50,5 +50,5 @@ function Hero() {
     </section>
   );
 }
- 
+
 export default Hero;

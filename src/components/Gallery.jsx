@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
- 
+
 const photos = [
   { src: '/assests/glimpse4.png', label: 'Glimpse 4' },
   { src: '/assests/glimpse1.jpg', label: 'Glimpse 1' },
@@ -9,26 +9,21 @@ const photos = [
   { src: '/assests/glimpse5.jpg', label: 'Glimpse 5' },
   { src: '/assests/glimpse6.jpg', label: 'Glimpse 6' },
 ];
- 
+
 const headingVariants = {
   hidden: { opacity: 0, y: 20 },
   visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: 'easeOut' } },
 };
- 
-// Even index → slide from left, Odd index → slide from right
+
 const getSlideVariant = (index) => ({
-  hidden: { opacity: 0, x: index % 2 === 0 ? -100 : 100 },
+  hidden: { opacity: 0, x: index % 2 === 0 ? -80 : 80 },
   visible: {
     opacity: 1,
     x: 0,
-    transition: {
-      duration: 0.65,
-      ease: 'easeOut',
-      // delay: (index % 3) * 0.1,
-    },
+    transition: { duration: 0.65, ease: 'easeOut', delay: (index % 3) * 0.1 },
   },
 });
- 
+
 function Gallery() {
   return (
     <div id="gallery" className="gallery-bg">
@@ -38,11 +33,11 @@ function Gallery() {
           variants={headingVariants}
           initial="hidden"
           whileInView="visible"
-          viewport={{ once: false, amount: 0.4 }}
+          viewport={{ once: true, amount: 0.4 }}
         >
           Photo Gallery
         </motion.p>
- 
+
         <motion.h2
           style={{
             fontFamily: "'Playfair Display', serif",
@@ -57,7 +52,7 @@ function Gallery() {
         >
           A Glimpse of Paradise
         </motion.h2>
- 
+
         <div className="gallery-grid">
           {photos.map((p, index) => (
             <motion.div
@@ -66,7 +61,7 @@ function Gallery() {
               variants={getSlideVariant(index)}
               initial="hidden"
               whileInView="visible"
-              viewport={{ once: false, amount: 0.2 }}
+              viewport={{ once: true, amount: 0.2 }}
               style={{ overflow: 'hidden' }}
               whileHover={{ scale: 1.03, transition: { duration: 0.25 } }}
             >
@@ -78,5 +73,5 @@ function Gallery() {
     </div>
   );
 }
- 
+
 export default Gallery;
