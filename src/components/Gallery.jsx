@@ -33,7 +33,7 @@ function Gallery() {
           variants={headingVariants}
           initial="hidden"
           whileInView="visible"
-          viewport={{ once: false, amount: 0.4 }}
+          viewport={{ once: true, amount: 0.4 }}
         >
           Photo Gallery
         </motion.p>
@@ -48,7 +48,7 @@ function Gallery() {
           variants={headingVariants}
           initial="hidden"
           whileInView="visible"
-          viewport={{ once: false, amount: 0.4 }}
+          viewport={{ once: true, amount: 0.4 }}
         >
           A Glimpse of Paradise
         </motion.h2>
