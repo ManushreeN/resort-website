@@ -825,6 +825,28 @@ footer {
   }
 
   /* Rooms */
+  .rooms-summary {
+    flex-wrap: wrap;
+    gap: 8px;
+    padding: 16px;
+  }
+  
+  .summary-box {
+    flex-basis: calc(50% - 8px);
+    min-width: 130px;
+    padding: 12px 8px;
+  }
+  
+  .summary-box h2 {
+    font-size: 1.2rem;
+    white-space: normal;
+  }
+  
+  .summary-box p {
+    font-size: 0.7rem;
+    white-space: normal;
+  }
+
   .rooms-grid {
     grid-template-columns: 1fr;
     gap: 16px;

@@ -8,6 +8,11 @@ const features = [
   { text: 'Large Outdoor Area' },
   { text: 'Family Friendly Stay' },
   { text: 'Comfortable Group Getaways' },
+  { text: 'Night Fire Camp' },
+  { text: 'Rain Dance' },
+  { text: 'DJ with Party Songs' },
+  { text: 'Swimming Pool' },
+  { text: 'All activities till 11:00 PM' },
 ];
 
 const fadeUp = {
