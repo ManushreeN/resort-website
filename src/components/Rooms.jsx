@@ -133,14 +133,14 @@ const RoomCard = ({ r }) => {
         )}
       </div>
       
-      <div className="room-body">
-        <h3 className="room-card-title">{r.name}</h3>
-        <p className="room-count room-card-count">
+      <div className="room-body" style={{ display: 'flex', flexDirection: 'column' }}>
+        <h3 style={{ textAlign: 'center', width: '100%', display: 'block' }}>{r.name}</h3>
+        <p className="room-count" style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', width: '100%' }}>
           <span className="room-count-dot">&#9679;</span>
           {r.count} {r.count === 1 ? 'Room' : 'Rooms'} Available
         </p>
         
-        <ul className="room-details-list with-icons room-amenities-grid">
+        <ul className="room-details-list with-icons" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '8px 12px', listStyle: 'none', padding: 0, margin: '16px 0' }}>
           {r.details?.map((detail, idx) => (
             <li key={idx}>
               <span className="detail-icon">{detail.icon}</span>
