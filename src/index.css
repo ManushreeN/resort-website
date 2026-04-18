@@ -936,3 +936,108 @@ footer {
     font-size: 0.88rem;
   }
 }
+
+/* Room Card Slider & Details */
+.slider-wrapper {
+  position: relative;
+  overflow: hidden;
+  height: 240px;
+  background: #f5f5f5;
+}
+
+.slider-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  cursor: grab;
+}
+
+.slider-img:active {
+  cursor: grabbing;
+}
+
+.slider-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(10, 25, 25, 0.4);
+  border: none;
+  border-radius: 50%;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 2;
+  transition: background 0.2s;
+}
+.slider-btn:hover { background: rgba(10, 25, 25, 0.8); }
+.slider-btn.prev { left: 10px; }
+.slider-btn.next { right: 10px; }
+
+.slider-dots {
+  position: absolute;
+  bottom: 12px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 6px;
+  z-index: 2;
+}
+
+.slider-dots .dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.5);
+  transition: all 0.2s;
+}
+.slider-dots .dot.active {
+  background: #fff;
+  transform: scale(1.3);
+}
+
+.room-details-list.with-icons {
+  list-style: none; /* Removes the default bullets */
+  padding: 0;
+  margin: 16px 0;
+}
+
+.room-details-list.with-icons li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-family: 'Poppins', sans-serif;
+  color: #555;
+  font-size: 0.85rem;
+  margin-bottom: 8px;
+  line-height: 1.4;
+}
+
+.detail-icon {
+  color: #c9a96e;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.room-footer.centered {
+  display: flex;
+  justify-content: center;
+  border-top: 1px solid #eee;
+  padding-top: 16px;
+  margin-top: auto;
+}
+
+.large-book-btn {
+  padding: 12px 36px;
+  font-size: 1rem;
+  font-weight: 500;
+  letter-spacing: 0.05em;
+  border-radius: 6px;
+}
