@@ -80,6 +80,7 @@ function About() {
             whileInView="visible"
             viewport={{ once: true, amount: 0.3 }}
           >
+            {/* Paragraph first */}
             <p className="about-para">
               Mantri Stay Gokarna is a peaceful getaway located on Gokarna Road near Hittalmakki,
               Gokarna, Karnataka. Designed for comfort and convenience, the property offers Double AC rooms,
@@ -87,12 +88,14 @@ function About() {
               calm natural setting, it is an ideal stay for families, couples, and groups looking to relax and recharge.
             </p>
 
+            {/* Amenities slightly below paragraph, small gap */}
             <motion.div
               className="features-list"
               variants={featureContainer}
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true, amount: 0.3 }}
+              style={{ marginTop: '12px' }}
             >
               {features.map((f) => (
                 <motion.div className="feat" key={f.text} variants={featureItem}>

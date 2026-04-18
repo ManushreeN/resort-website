@@ -107,7 +107,7 @@ h3 {
 /* Hero */
 .hero {
   height: 100vh;
-  background-position: center;
+  background-position: linear-gradient(rgba(10, 30, 30, 0.6), rgba(10, 30, 30, 0.5)), url('https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=1600&q=80') center/cover no-repeat;
   background-size: cover;
   background-repeat: no-repeat;
   display: flex;
@@ -449,7 +449,11 @@ h3 {
   color: #1a3a3a;
   margin: 6px 0 20px;
 }
-.rooms-title em { color: #c9a96e; font-style: italic; }
+
+.rooms-title em {
+  color: #c9a96e;
+  font-style: italic;
+}
 
 /* Rooms Summary */
 .rooms-summary {
@@ -476,7 +480,7 @@ h3 {
   z-index: 0;
 }
 
-.rooms-summary > * {
+.rooms-summary>* {
   position: relative;
   z-index: 1;
 }
@@ -486,7 +490,7 @@ h3 {
   padding: 14px 12px;
   background: rgba(255, 255, 255, 0.08);
   backdrop-filter: blur(4px);
-  border: 1px solid rgba(255,255,255,0.15);
+  border: 1px solid rgba(255, 255, 255, 0.15);
   border-radius: 10px;
   flex: 1;
   min-width: 0;
@@ -505,7 +509,7 @@ h3 {
 }
 
 .summary-box p {
-  color: rgba(255,255,255,0.82);
+  color: rgba(255, 255, 255, 0.82);
   font-size: 0.75rem;
   margin: 5px 0 0;
   white-space: nowrap;
@@ -537,6 +541,7 @@ h3 {
   border: 1px solid #e0d5c5;
   height: 100%;
 }
+
 .contact-map iframe {
   height: 100%;
   min-height: 200px;
@@ -879,18 +884,18 @@ footer {
     gap: 8px;
     padding: 16px;
   }
-  
+
   .summary-box {
     flex-basis: calc(50% - 8px);
     min-width: 130px;
     padding: 12px 8px;
   }
-  
+
   .summary-box h2 {
     font-size: 1.2rem;
     white-space: normal;
   }
-  
+
   .summary-box p {
     font-size: 0.7rem;
     white-space: normal;
@@ -1025,9 +1030,18 @@ footer {
   z-index: 2;
   transition: background 0.2s;
 }
-.slider-btn:hover { background: rgba(10, 25, 25, 0.8); }
-.slider-btn.prev { left: 10px; }
-.slider-btn.next { right: 10px; }
+
+.slider-btn:hover {
+  background: rgba(10, 25, 25, 0.8);
+}
+
+.slider-btn.prev {
+  left: 10px;
+}
+
+.slider-btn.next {
+  right: 10px;
+}
 
 .slider-dots {
   position: absolute;
@@ -1046,6 +1060,7 @@ footer {
   background: rgba(255, 255, 255, 0.5);
   transition: all 0.2s;
 }
+
 .slider-dots .dot.active {
   background: #fff;
   transform: scale(1.3);
@@ -1104,6 +1119,7 @@ footer {
   letter-spacing: 0.05em;
   border-radius: 6px;
 }
+
 /* Terms Modal Styles */
 .terms-modal-overlay {
   position: fixed;
@@ -1126,7 +1142,7 @@ footer {
   max-height: 90vh;
   overflow-y: auto;
   border-radius: 8px;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
 }
 
 .terms-modal img {
@@ -1153,5 +1169,5 @@ footer {
   display: flex;
   justify-content: center;
   align-items: center;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
