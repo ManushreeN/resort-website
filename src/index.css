@@ -381,6 +381,7 @@ h3 {
   color: #222;
   margin: 6px 0 8px;
   font-family: 'Playfair Display', serif;
+  text-align: center;
 }
 
 .room-body p {
@@ -392,6 +393,7 @@ h3 {
 
 .room-count {
   display: flex;
+  justify-content: center;
   align-items: center;
   gap: 6px;
   font-size: 0.8rem;
@@ -1005,17 +1007,19 @@ footer {
 .room-details-list.with-icons {
   list-style: none; /* Removes the default bullets */
   padding: 0;
-  margin: 16px 0;
+  margin: 16px 0 24px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px 16px;
 }
 
 .room-details-list.with-icons li {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   gap: 10px;
   font-family: 'Poppins', sans-serif;
   color: #555;
   font-size: 0.85rem;
-  margin-bottom: 8px;
   line-height: 1.4;
 }
 
