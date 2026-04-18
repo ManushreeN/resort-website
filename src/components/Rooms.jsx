@@ -134,13 +134,23 @@ const RoomCard = ({ r }) => {
       </div>
       
       <div className="room-body">
-        <h3>{r.name}</h3>
-        <p className="room-count">
+        <h3 style={{ textAlign: 'center' }}>{r.name}</h3>
+        <p className="room-count" style={{ justifyContent: 'center' }}>
           <span className="room-count-dot">&#9679;</span>
           {r.count} {r.count === 1 ? 'Room' : 'Rooms'} Available
         </p>
         
-        <ul className="room-details-list with-icons">
+        <ul 
+          className="room-details-list with-icons"
+          style={{ 
+            display: 'grid', 
+            gridTemplateColumns: '1fr 1fr', 
+            gap: '12px 16px', 
+            listStyle: 'none', 
+            padding: 0,
+            margin: '16px 0 24px'
+          }}
+        >
           {r.details?.map((detail, idx) => (
             <li key={idx}>
               <span className="detail-icon">{detail.icon}</span>
