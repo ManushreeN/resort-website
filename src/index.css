@@ -271,7 +271,7 @@ h3 {
 
 .feat {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   gap: 8px;
   font-family: 'Dancing Script', cursive;
   font-size: 1.2rem;
@@ -287,6 +287,7 @@ h3 {
   font-size: 1rem;
   line-height: 1;
   flex-shrink: 0;
+  margin-top: 6px;
 }
 
 /* ---- end About font ---- */
@@ -841,8 +842,8 @@ footer {
   }
 
   .features-list {
-    grid-template-columns: 1fr 1fr;
-    gap: 4px;
+    grid-template-columns: 1fr 1.1fr;
+    gap: 15px;
     margin-top: -8px;
   }
 
