@@ -118,8 +118,7 @@ h3 {
 }
 
 .hero-watermark {
-  position: absolute;
-  bottom: 80px;
+  margin-top: 40px;
   width: 100%;
   text-align: center;
   font-size: clamp(2rem, 8vw, 12rem);
@@ -130,8 +129,8 @@ h3 {
   z-index: 1;
   text-transform: uppercase;
   font-family: 'Poppins', sans-serif;
-  line-height: 1;
-  padding: 0 20px;
+  line-height: 1.1;
+  padding: 0 10px;
 }
 
 .hero-content {
@@ -805,8 +804,8 @@ footer {
   }
 
   .hero-watermark {
-    bottom: 60px;
-    font-size: clamp(1.5rem, 12vw, 4rem);
+    margin-top: 25px;
+    font-size: clamp(1.5rem, 10vw, 3.5rem);
     letter-spacing: 0.1em;
   }
 
@@ -842,8 +841,9 @@ footer {
   }
 
   .features-list {
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr 1fr;
     gap: 4px;
+    margin-top: -8px;
   }
 
   .about-text .about-para,
