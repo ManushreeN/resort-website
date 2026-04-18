@@ -3,9 +3,9 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { BedDouble, BedSingle, Bath, Users, Wifi, ChevronLeft, ChevronRight } from 'lucide-react';
 
 const rooms = [
-  { 
-    name: 'Family Room Non-AC', 
-    imgs: ['/assests/glimpse1.jpg', '/assests/glimpse2.jpg', '/assests/familyAC.jpg'],  
+  {
+    name: 'Family Room Non-AC',
+    imgs: ['/assests/glimpse1.jpg', '/assests/glimpse2.jpg', '/assests/familyAC.jpg'],
     count: 2,
     details: [
       { text: '2 Double beds', icon: <BedDouble size={16} /> },
@@ -14,9 +14,9 @@ const rooms = [
       { text: 'Up to 7 guests (with extra mattresses)', icon: <Users size={16} /> }
     ]
   },
-  { 
-    name: 'Double Room AC',     
-    imgs: ['/assests/doubleAC.jpg', '/assests/glimpse3.jpg', '/assests/glimpse5.jpg'],  
+  {
+    name: 'Double Room AC',
+    imgs: ['/assests/doubleAC.jpg', '/assests/glimpse3.jpg', '/assests/glimpse5.jpg'],
     count: 4,
     details: [
       { text: '1 Double bed', icon: <BedDouble size={16} /> },
@@ -24,9 +24,9 @@ const rooms = [
       { text: 'Up to 4 guests (with extra mattresses)', icon: <Users size={16} /> }
     ]
   },
-  { 
-    name: 'Family Room AC',     
-    imgs: ['/assests/familyAC.jpg', '/assests/glimpse1.jpg', '/assests/doubleAC.jpg'],  
+  {
+    name: 'Family Room AC',
+    imgs: ['/assests/familyAC.jpg', '/assests/glimpse1.jpg', '/assests/doubleAC.jpg'],
     count: 2,
     details: [
       { text: '2 Double beds', icon: <BedDouble size={16} /> },
@@ -35,9 +35,9 @@ const rooms = [
       { text: 'Up to 7 guests (with extra mattresses)', icon: <Users size={16} /> }
     ]
   },
-  { 
-    name: 'Double Room Non-AC', 
-    imgs: ['/assests/doublenonAC.jpg', '/assests/glimpse6.jpg', '/assests/glimpse2.jpg'], 
+  {
+    name: 'Double Room Non-AC',
+    imgs: ['/assests/doublenonAC.jpg', '/assests/glimpse6.jpg', '/assests/glimpse2.jpg'],
     count: 2,
     details: [
       { text: '1 Double bed', icon: <BedDouble size={16} /> },
@@ -45,9 +45,9 @@ const rooms = [
       { text: 'Up to 3 guests easily', icon: <Users size={16} /> }
     ]
   },
-  { 
-    name: 'AC Cottage',         
-    imgs: ['/assests/cottage.jpg', '/assests/glimpse5.jpg', '/assests/glimpse4.png'],   
+  {
+    name: 'AC Cottage',
+    imgs: ['/assests/cottage.jpg', '/assests/glimpse5.jpg', '/assests/glimpse4.png'],
     count: 3,
     details: [
       { text: '1 Double bed', icon: <BedDouble size={16} /> },
@@ -56,9 +56,9 @@ const rooms = [
       { text: 'Up to 7-8 guests (with 2 extra mattresses)', icon: <Users size={16} /> }
     ]
   },
-  { 
-    name: 'Dormitory Room',     
-    imgs: ['/assests/glimpse1.jpg', '/assests/glimpse6.jpg', '/assests/doubleAC.jpg'],  
+  {
+    name: 'Dormitory Room',
+    imgs: ['/assests/glimpse1.jpg', '/assests/glimpse6.jpg', '/assests/doubleAC.jpg'],
     count: 1,
     details: [
       { text: '4 Single beds', icon: <BedSingle size={16} /> },
@@ -119,7 +119,7 @@ const RoomCard = ({ r }) => {
             }}
           />
         </AnimatePresence>
-        
+
         {r.imgs.length > 1 && (
           <>
             <button className="slider-btn prev" onClick={prevImg}><ChevronLeft size={20} color="#fff" /></button>
@@ -132,14 +132,14 @@ const RoomCard = ({ r }) => {
           </>
         )}
       </div>
-      
+
       <div className="room-body" style={{ display: 'flex', flexDirection: 'column' }}>
         <h3 style={{ textAlign: 'center', width: '100%', display: 'block' }}>{r.name}</h3>
         <p className="room-count" style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', width: '100%' }}>
           <span className="room-count-dot">&#9679;</span>
           {r.count} {r.count === 1 ? 'Room' : 'Rooms'} Available
         </p>
-        
+
         <ul className="room-details-list with-icons" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '8px 12px', listStyle: 'none', padding: 0, margin: '16px 0' }}>
           {r.details?.map((detail, idx) => (
             <li key={idx}>
