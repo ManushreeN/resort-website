@@ -119,18 +119,19 @@ h3 {
 
 .hero-watermark {
   position: absolute;
-  bottom: 120px;
+  bottom: 80px;
   width: 100%;
   text-align: center;
-  font-size: clamp(2rem, 5.5vw, 25rem);
+  font-size: clamp(2rem, 8vw, 12rem);
   font-weight: 900;
-  color: rgba(255, 255, 255, 0.18);
+  color: rgba(255, 255, 255, 0.15);
   letter-spacing: 0.15em;
   pointer-events: none;
   z-index: 1;
   text-transform: uppercase;
-  white-space: nowrap;
   font-family: 'Poppins', sans-serif;
+  line-height: 1;
+  padding: 0 20px;
 }
 
 .hero-content {
@@ -803,6 +804,12 @@ footer {
     font-size: 0.88rem;
   }
 
+  .hero-watermark {
+    bottom: 60px;
+    font-size: clamp(1.5rem, 12vw, 4rem);
+    letter-spacing: 0.1em;
+  }
+
   .btn-gold {
     padding: 11px 22px;
     font-size: 0.78rem;
@@ -835,8 +842,8 @@ footer {
   }
 
   .features-list {
-    grid-template-columns: 1fr 1fr;
-    gap: 8px;
+    grid-template-columns: 1fr;
+    gap: 4px;
   }
 
   .about-text .about-para,

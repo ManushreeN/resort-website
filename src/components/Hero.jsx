@@ -49,9 +49,7 @@ function Hero() {
       </div>
 
       <div className="hero-watermark">
-        MANTRI STAY
-
-        <br></br>GOKARNA
+        MANTRI STAY GOKARNA
       </div>
     </section>
   );
