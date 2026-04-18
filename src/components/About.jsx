@@ -93,7 +93,6 @@ function About() {
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true, amount: 0.3 }}
-              style={{ marginTop: '8px' }}
             >
               {features.map((f) => (
                 <motion.div className="feat" key={f.text} variants={featureItem}>
