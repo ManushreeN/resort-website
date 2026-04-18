@@ -119,10 +119,10 @@ h3 {
 
 .hero-watermark {
   position: absolute;
-  bottom: 40px;
+  bottom: 180px;
   width: 100%;
   text-align: center;
-  font-size: clamp(2rem, 10vw, 7rem);
+  font-size: clamp(2rem, 5.5vw, 25rem);
   font-weight: 900;
   color: rgba(255, 255, 255, 0.18);
   letter-spacing: 0.15em;

@@ -47,9 +47,9 @@ function Hero() {
           <a className="btn-gold" href="tel:08660205501">Book a Stay</a>
         </motion.div>
       </div>
-      
+
       <div className="hero-watermark">
-        MANTRI RESORT GOKARNA
+        MANTRI STAY GOKARNA
       </div>
     </section>
   );
