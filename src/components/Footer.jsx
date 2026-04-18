@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 
 const scrollTo = (id) => document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' });
@@ -14,6 +14,8 @@ const itemVariants = {
 };
 
 function Footer() {
+  const [termsOpen, setTermsOpen] = useState(false);
+
   return (
     <footer>
       <motion.div
@@ -36,6 +38,7 @@ function Footer() {
             {['Home', 'About', 'Rooms', 'Gallery', 'Contact'].map((l) => (
               <li key={l}><a href="/" onClick={(e) => { e.preventDefault(); scrollTo(l.toLowerCase()); }}>{l}</a></li>
             ))}
+            <li><a href="/" className="terms-link" onClick={(e) => { e.preventDefault(); setTermsOpen(true); }}>Terms & Conditions</a></li>
           </ul>
         </motion.div>
 
@@ -48,6 +51,15 @@ function Footer() {
           </ul>
         </motion.div>
       </motion.div>
+
+      {termsOpen && (
+        <div className="terms-modal-overlay" onClick={() => setTermsOpen(false)}>
+          <div className="terms-modal" onClick={(e) => e.stopPropagation()}>
+            <button className="terms-modal-close" onClick={() => setTermsOpen(false)} aria-label="Close terms popup">×</button>
+            <img src="/assests/terms-conditions.jpg" alt="Terms and Conditions" />
+          </div>
+        </div>
+      )}
     </footer>
   );
 }
