@@ -9,9 +9,10 @@ const rooms = [
     imgs: [
       '/assests/family non ac .JPG',
       '/assests/family non ac 2.JPG',
-      '/assests/family non ac 3.JPG',
+
       '/assests/family non ac 4.JPG',
-      '/assests/family non ac 5.JPG'
+      '/assests/family non ac 5.JPG',
+      '/assests/family non ac 3.JPG'
     ],
     count: 2,
     details: [
@@ -23,11 +24,11 @@ const rooms = [
   {
     name: 'Double Room AC',
     imgs: [
-      '/assests/doubleAC.jpg',
-      '/assests/doubleAC2.JPG',
+      '/assests/doubleAC5.jpg',
       '/assests/doubleAC3.JPG',
+      '/assests/doubleAC2.JPG',
       '/assests/doubleAC4.jpg',
-      '/assests/doubleAC5.jpg'
+
     ],
     count: 4,
     details: [
@@ -40,12 +41,13 @@ const rooms = [
   {
     name: 'Family Room AC',
     imgs: [
-      '/assests/familyAC.jpg',
-      '/assests/familyAC2.JPG',
-      '/assests/familyAC3.JPG',
+      // '/assests/familyAC.jpg',
       '/assests/familyAC4.JPG',
+      '/assests/familyAC3.JPG',
+
       '/assests/familyAC5.JPG',
-      '/assests/familyAC6.JPG'
+      '/assests/familyAC6.JPG',
+      '/assests/familyAC2.JPG',
     ],
     count: 2,
     details: [
@@ -58,9 +60,10 @@ const rooms = [
   {
     name: 'Double Room Non-AC',
     imgs: [
-      '/assests/doublenonAC.jpg',
-      '/assests/doubleroomnonAC.JPG',
       '/assests/doubleroomnonAC2.JPG',
+
+      '/assests/doubleroomnonAC.JPG',
+
       '/assests/doubleroomnonAC3.JPG',
       '/assests/doubleroomnonAC4.JPG'
     ],
@@ -74,12 +77,14 @@ const rooms = [
   {
     name: 'AC Cottage',
     imgs: [
-      '/assests/cottageAC.jpg',
-      '/assests/cottageAC2.JPG',
-      '/assests/cottageAC3.JPG',
+      '/assests/cottageAC3.jpg',
       '/assests/cottageAC4.JPG',
       '/assests/cottageAC5.JPG',
-      '/assests/cottageAC6.JPG'
+      '/assests/cottageAC6.JPG',
+      '/assests/cottageAC8.JPG',
+      '/assests/cottageAC9.JPG',
+      '/assests/cottageAC10.JPG',
+      '/assests/cottageAC7.JPG'
     ],
     count: 3,
     details: [
@@ -93,11 +98,11 @@ const rooms = [
   {
     name: 'Swimming Pool',
     imgs: [
-      '/assests/sp.jpg',
-      '/assests/sp2.JPG',
       '/assests/sp3.JPG',
       '/assests/sp4.JPG',
+      '/assests/sp2.JPG',
       '/assests/sp5.JPG',
+      '/assests/sp.jpg'
 
     ],
     // count: 3,
@@ -257,7 +262,7 @@ function Rooms() {
 
         <div
           className="rooms-summary"
-          style={{ backgroundImage: "url('/assests/doubleAC.jpg')" }}
+          style={{ backgroundImage: "url('/assests/overview3.jpg')" }}
         >
           <div className="summary-box">
             <h2>14</h2>

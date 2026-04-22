@@ -2,19 +2,18 @@ import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 
 const photos = [
-  { src: '/assests/glimpse4.png', label: 'Glimpse 4' },
-  { src: '/assests/glimpse1.jpg', label: 'Glimpse 1' },
-  { src: '/assests/glimpse2.jpg', label: 'Glimpse 2' },
-  { src: '/assests/glimpse3.jpg', label: 'Glimpse 3' },
-  { src: '/assests/glimpse5.jpg', label: 'Glimpse 5' },
-  { src: '/assests/glimpse6.jpg', label: 'Glimpse 6' },
   { src: '/assests/overview.jpg', label: 'Glimpse 7' },
-  { src: '/assests/overview2.jpg', label: 'Glimpse 8' },
-  { src: '/assests/overview3.jpg', label: 'Glimpse 9' },
   { src: '/assests/overview4.jpg', label: 'Glimpse 10' },
+  { src: '/assests/overview3.jpg', label: 'Glimpse 9' },
+  { src: '/assests/glimpse4.png', label: 'Glimpse 4' },
   { src: '/assests/overview5.jpg', label: 'Glimpse 11' },
+  { src: '/assests/glimpse6.jpg', label: 'Glimpse 6' },
+  { src: '/assests/overview2.jpg', label: 'Glimpse 8' },
   { src: '/assests/overview6.jpg', label: 'Glimpse 12' },
+  { src: '/assests/glimpse1.jpg', label: 'Glimpse 1' },
+  { src: '/assests/glimpse2.jpg', label: 'Glimpse 2' }
 ];
+
 
 const headingVariants = {
   hidden: { opacity: 0, y: 20 },
@@ -71,8 +70,8 @@ function Gallery() {
             animate={{ opacity: 1 }}
             transition={{ duration: 0.5 }}
           >
-            <img 
-              src={photos[currentIndex].src} 
+            <img
+              src={photos[currentIndex].src}
               alt={photos[currentIndex].label}
               className="carousel-image"
             />
