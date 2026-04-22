@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { List } from "lucide-react";
 import { motion, AnimatePresence } from 'framer-motion';
-import { BedDouble, BedSingle, Bath, Users, Wifi, ChevronLeft, ChevronRight } from 'lucide-react';
+import { BedDouble, BedSingle, Users, ChevronLeft, ChevronRight } from 'lucide-react';
 
 const rooms = [
   {
