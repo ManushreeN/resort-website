@@ -8,7 +8,7 @@ const photos = [
   { src: '/assests/glimpse4.png', label: 'Glimpse 4' },
   { src: '/assests/overview5.JPG', label: 'Glimpse 11' },
   { src: '/assests/glimpse6.jpg', label: 'Glimpse 6' },
-  { src: '/assests/glimpse3.jpg', label: 'Glimpse 3' },
+  // { src: '/assests/glimpse3.jpg', label: 'Glimpse 3' },
   { src: '/assests/overview2.JPG', label: 'Glimpse 8' },
   { src: '/assests/overview6.JPG', label: 'Glimpse 12' },
   { src: '/assests/glimpse1.jpg', label: 'Glimpse 1' },

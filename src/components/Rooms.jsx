@@ -68,7 +68,7 @@ const rooms = [
   {
     name: 'AC Cottage',
     imgs: [
-      '/assests/cottageAC3.jpg',
+      // '/assests/cottageAC3.jpg',
       '/assests/cottageAC4.JPG',
       '/assests/cottageAC5.JPG',
       '/assests/cottageAC6.JPG',
