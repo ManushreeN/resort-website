@@ -262,7 +262,7 @@ function Rooms() {
 
         <div
           className="rooms-summary"
-          style={{ backgroundImage: "url('/assests/overview3.jpg')" }}
+          style={{ backgroundImage: "url('/assests/container.jpg')" }}
         >
           <div className="summary-box">
             <h2>14</h2>
