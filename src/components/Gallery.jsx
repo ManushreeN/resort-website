@@ -1,15 +1,16 @@
 import React, { useState } from 'react';
-import { motion } from 'framer-motion';
+import { motion, AnimatePresence } from 'framer-motion';
 
 const photos = [
-  { src: '/assests/overview.jpg', label: 'Glimpse 7' },
-  { src: '/assests/overview4.jpg', label: 'Glimpse 10' },
-  { src: '/assests/overview3.jpg', label: 'Glimpse 9' },
+  { src: '/assests/overview.JPG', label: 'Glimpse 7' },
+  { src: '/assests/overview4.JPG', label: 'Glimpse 10' },
+  { src: '/assests/overview3.JPG', label: 'Glimpse 9' },
   { src: '/assests/glimpse4.png', label: 'Glimpse 4' },
-  { src: '/assests/overview5.jpg', label: 'Glimpse 11' },
+  { src: '/assests/overview5.JPG', label: 'Glimpse 11' },
   { src: '/assests/glimpse6.jpg', label: 'Glimpse 6' },
-  { src: '/assests/overview2.jpg', label: 'Glimpse 8' },
-  { src: '/assests/overview6.jpg', label: 'Glimpse 12' },
+  { src: '/assests/glimpse3.jpg', label: 'Glimpse 3' },
+  { src: '/assests/overview2.JPG', label: 'Glimpse 8' },
+  { src: '/assests/overview6.JPG', label: 'Glimpse 12' },
   { src: '/assests/glimpse1.jpg', label: 'Glimpse 1' },
   { src: '/assests/glimpse2.jpg', label: 'Glimpse 2' }
 ];
@@ -64,18 +65,23 @@ function Gallery() {
         </motion.h2>
 
         <div className="gallery-carousel">
-          <motion.div
-            className="carousel-container"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 0.5 }}
-          >
-            <img
-              src={photos[currentIndex].src}
-              alt={photos[currentIndex].label}
-              className="carousel-image"
-            />
-          </motion.div>
+          <AnimatePresence mode="wait">
+            <motion.div
+              key={currentIndex}
+              className="carousel-container"
+              initial={{ opacity: 0, scale: 0.95 }}
+              animate={{ opacity: 1, scale: 1 }}
+              exit={{ opacity: 0, scale: 0.95 }}
+              transition={{ duration: 0.6, ease: 'easeInOut' }}
+            >
+              <img
+                src={photos[currentIndex].src}
+                alt={photos[currentIndex].label}
+                className="carousel-image"
+                loading="lazy"
+              />
+            </motion.div>
+          </AnimatePresence>
 
           <button className="carousel-btn prev-btn" onClick={goToPrevious}>
             ❮

@@ -9,7 +9,6 @@ const rooms = [
     imgs: [
       '/assests/family non ac .JPG',
       '/assests/family non ac 2.JPG',
-
       '/assests/family non ac 4.JPG',
       '/assests/family non ac 5.JPG',
       '/assests/family non ac 3.JPG'
@@ -28,23 +27,19 @@ const rooms = [
       '/assests/doubleAC3.JPG',
       '/assests/doubleAC2.JPG',
       '/assests/doubleAC4.jpg',
-
     ],
     count: 4,
     details: [
       { text: '2 King Size bed', icon: <BedDouble size={16} /> },
       { text: '1 Single bed', icon: <BedSingle size={16} /> },
-      // { text: 'Attached washroom', icon: <Bath size={16} /> },
       { text: 'Up to 3-4 guests (with extra mattresses)', icon: <Users size={16} /> }
     ]
   },
   {
     name: 'Family Room AC',
     imgs: [
-      // '/assests/familyAC.jpg',
       '/assests/familyAC4.JPG',
       '/assests/familyAC3.JPG',
-
       '/assests/familyAC5.JPG',
       '/assests/familyAC6.JPG',
       '/assests/familyAC2.JPG',
@@ -53,7 +48,6 @@ const rooms = [
     details: [
       { text: '2 King Size beds', icon: <BedDouble size={16} /> },
       { text: '1 Single bed', icon: <BedSingle size={16} /> },
-      // { text: '1 Attached washroom', icon: <Bath size={16} /> },
       { text: 'Up to 7-8 guest (with extra mattresses)', icon: <Users size={16} /> }
     ]
   },
@@ -61,16 +55,13 @@ const rooms = [
     name: 'Double Room Non-AC',
     imgs: [
       '/assests/doubleroomnonAC2.JPG',
-
       '/assests/doubleroomnonAC.JPG',
-
       '/assests/doubleroomnonAC3.JPG',
       '/assests/doubleroomnonAC4.JPG'
     ],
     count: 2,
     details: [
       { text: '1 King Size bed', icon: <BedDouble size={16} /> },
-      // { text: 'Outside attached washroom', icon: <Bath size={16} /> },
       { text: 'Up to 3 guest (with extra mattresses)', icon: <Users size={16} /> }
     ]
   },
@@ -81,20 +72,20 @@ const rooms = [
       '/assests/cottageAC4.JPG',
       '/assests/cottageAC5.JPG',
       '/assests/cottageAC6.JPG',
+      '/assests/cottageAC7.JPG',
       '/assests/cottageAC8.JPG',
       '/assests/cottageAC9.JPG',
       '/assests/cottageAC10.JPG',
-      '/assests/cottageAC7.JPG'
+      '/assests/cottageAC11.JPG',
+      '/assests/cottageAC2.JPG'
     ],
     count: 3,
     details: [
       { text: '1 King Size bed', icon: <BedDouble size={16} /> },
       { text: '1 Single bed', icon: <BedSingle size={16} /> },
-      // { text: 'Attached washroom', icon: <Bath size={16} /> },
       { text: 'Up to 7-8 guest (with extra mattresses)', icon: <Users size={16} /> }
     ]
   },
-
   {
     name: 'Swimming Pool',
     imgs: [
@@ -102,24 +93,9 @@ const rooms = [
       '/assests/sp4.JPG',
       '/assests/sp2.JPG',
       '/assests/sp5.JPG',
-      '/assests/sp.jpg'
-
+      '/assests/sp.JPG'
     ],
-    // count: 3,
-    // details: [
-    //   { text: '1 King Size bed', icon: <BedDouble size={16} /> },
-    //   { text: '1 Single bed', icon: <BedSingle size={16} /> },
-    //   // { text: 'Attached washroom', icon: <Bath size={16} /> },
-    //   { text: 'Up to 7-8 guest (with extra mattresses)', icon: <Users size={16} /> }
-    // ]
   },
-
-
-
-
-
-
-
 ];
 
 const containerVariants = {
@@ -155,10 +131,10 @@ const RoomCard = ({ r }) => {
             key={currentImgIndex}
             src={r.imgs[currentImgIndex]}
             alt={r.name}
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            transition={{ duration: 0.3 }}
+            initial={{ opacity: 0, scale: 0.95 }}
+            animate={{ opacity: 1, scale: 1 }}
+            exit={{ opacity: 0, scale: 0.95 }}
+            transition={{ duration: 0.6, ease: 'easeInOut' }}
             className="slider-img"
             drag="x"
             dragConstraints={{ left: 0, right: 0 }}
