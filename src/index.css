@@ -208,9 +208,13 @@ h3 {
 
 /* Sections */
 .section {
-  padding: 80px 40px;
+  padding: 60px 40px;
   max-width: 1100px;
   margin: 0 auto;
+}
+
+#contact .section {
+  padding-top: 20px;
 }
 
 .section-tag {
@@ -295,7 +299,7 @@ h3 {
 /* Gallery */
 .gallery-bg {
   background: #fff;
-  padding: 80px 0;
+  padding: 80px 0 20px;
   overflow-x: hidden;
 }
 
@@ -305,27 +309,104 @@ h3 {
   padding: 0 40px;
 }
 
-.gallery-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 10px;
+.gallery-carousel {
+  position: relative;
   margin-top: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.gallery-grid img {
+.carousel-container {
   width: 100%;
-  height: 240px;
+  max-width: 800px;
+  height: 450px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 12px;
+  overflow: hidden;
+  background: #f5f5f5;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+}
+
+.carousel-image {
+  width: 100%;
+  height: 100%;
   object-fit: cover;
-  cursor: pointer;
   display: block;
 }
 
-.gallery-grid .wide {
-  grid-column: span 2;
+.carousel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(26, 58, 58, 0.7);
+  color: white;
+  border: none;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  font-size: 24px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  z-index: 10;
 }
 
-.gallery-grid .wide img {
-  height: 280px;
+.carousel-btn:hover {
+  background: rgba(26, 58, 58, 0.9);
+  transform: translateY(-50%) scale(1.1);
+}
+
+.prev-btn {
+  left: -60px;
+}
+
+.next-btn {
+  right: -60px;
+}
+
+.carousel-indicators {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 12px;
+  z-index: 10;
+}
+
+.dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.5);
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.dot.active {
+  background: white;
+  width: 32px;
+  border-radius: 6px;
+}
+
+.carousel-counter {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: rgba(26, 58, 58, 0.8);
+  color: white;
+  padding: 8px 16px;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 500;
+  z-index: 10;
 }
 
 /* Rooms */
@@ -416,7 +497,7 @@ h3 {
   gap: 6px;
   font-size: 0.8rem;
   font-family: 'Poppins', sans-serif;
-  color: #888;
+  color: #090cb8;
   margin-bottom: 14px;
   font-weight: 400;
 }
@@ -725,12 +806,16 @@ footer {
     grid-template-columns: 1fr 1fr;
   }
 
-  .gallery-grid {
-    grid-template-columns: 1fr 1fr;
+  .carousel-container {
+    height: 380px;
   }
 
-  .gallery-grid .wide {
-    grid-column: span 2;
+  .prev-btn {
+    left: -50px;
+  }
+
+  .next-btn {
+    right: -50px;
   }
 }
 
@@ -895,21 +980,43 @@ footer {
   }
 
   /* Gallery */
-  .gallery-grid {
-    grid-template-columns: 1fr;
+  .carousel-container {
+    height: 300px;
+  }
+
+  .carousel-btn {
+    width: 40px;
+    height: 40px;
+    font-size: 18px;
+  }
+
+  .prev-btn {
+    left: 10px;
+  }
+
+  .next-btn {
+    right: 10px;
+  }
+
+  .carousel-indicators {
+    bottom: 15px;
     gap: 8px;
   }
 
-  .gallery-grid .wide {
-    grid-column: span 1;
+  .dot {
+    width: 10px;
+    height: 10px;
   }
 
-  .gallery-grid img {
-    height: 200px;
+  .dot.active {
+    width: 28px;
   }
 
-  .gallery-grid .wide img {
-    height: 200px;
+  .carousel-counter {
+    top: 15px;
+    right: 15px;
+    font-size: 12px;
+    padding: 6px 12px;
   }
 
   /* Contact */

@@ -1,71 +1,120 @@
 import React, { useState } from 'react';
+import { List } from "lucide-react";
 import { motion, AnimatePresence } from 'framer-motion';
 import { BedDouble, BedSingle, Bath, Users, Wifi, ChevronLeft, ChevronRight } from 'lucide-react';
 
 const rooms = [
   {
     name: 'Family Room Non-AC',
-    imgs: ['/assests/glimpse1.jpg', '/assests/glimpse2.jpg', '/assests/familyAC.jpg'],
+    imgs: [
+      '/assests/family non ac .JPG',
+      '/assests/family non ac 2.JPG',
+      '/assests/family non ac 3.JPG',
+      '/assests/family non ac 4.JPG',
+      '/assests/family non ac 5.JPG'
+    ],
     count: 2,
     details: [
-      { text: '2 Double beds', icon: <BedDouble size={16} /> },
+      { text: '2 King Size beds', icon: <BedDouble size={16} /> },
       { text: '1 Single bed', icon: <BedSingle size={16} /> },
-      { text: '1 Attached washroom', icon: <Bath size={16} /> },
-      { text: 'Up to 7 guests (with extra mattresses)', icon: <Users size={16} /> }
+      { text: 'Up to 7-8 guests (with extra mattresses)', icon: <Users size={16} /> },
     ]
   },
   {
     name: 'Double Room AC',
-    imgs: ['/assests/doubleAC.jpg', '/assests/glimpse3.jpg', '/assests/glimpse5.jpg'],
+    imgs: [
+      '/assests/doubleAC.jpg',
+      '/assests/doubleAC2.JPG',
+      '/assests/doubleAC3.JPG',
+      '/assests/doubleAC4.jpg',
+      '/assests/doubleAC5.jpg'
+    ],
     count: 4,
     details: [
-      { text: '1 Double bed', icon: <BedDouble size={16} /> },
-      { text: 'Attached washroom', icon: <Bath size={16} /> },
-      { text: 'Up to 4 guests (with extra mattresses)', icon: <Users size={16} /> }
+      { text: '2 King Size bed', icon: <BedDouble size={16} /> },
+      { text: '1 Single bed', icon: <BedSingle size={16} /> },
+      // { text: 'Attached washroom', icon: <Bath size={16} /> },
+      { text: 'Up to 3-4 guests (with extra mattresses)', icon: <Users size={16} /> }
     ]
   },
   {
     name: 'Family Room AC',
-    imgs: ['/assests/familyAC.jpg', '/assests/glimpse1.jpg', '/assests/doubleAC.jpg'],
+    imgs: [
+      '/assests/familyAC.jpg',
+      '/assests/familyAC2.JPG',
+      '/assests/familyAC3.JPG',
+      '/assests/familyAC4.JPG',
+      '/assests/familyAC5.JPG',
+      '/assests/familyAC6.JPG'
+    ],
     count: 2,
     details: [
-      { text: '2 Double beds', icon: <BedDouble size={16} /> },
+      { text: '2 King Size beds', icon: <BedDouble size={16} /> },
       { text: '1 Single bed', icon: <BedSingle size={16} /> },
-      { text: '1 Attached washroom', icon: <Bath size={16} /> },
-      { text: 'Up to 7 guests (with extra mattresses)', icon: <Users size={16} /> }
+      // { text: '1 Attached washroom', icon: <Bath size={16} /> },
+      { text: 'Up to 7-8 guest (with extra mattresses)', icon: <Users size={16} /> }
     ]
   },
   {
     name: 'Double Room Non-AC',
-    imgs: ['/assests/doublenonAC.jpg', '/assests/glimpse6.jpg', '/assests/glimpse2.jpg'],
+    imgs: [
+      '/assests/doublenonAC.jpg',
+      '/assests/doubleroomnonAC.JPG',
+      '/assests/doubleroomnonAC2.JPG',
+      '/assests/doubleroomnonAC3.JPG',
+      '/assests/doubleroomnonAC4.JPG'
+    ],
     count: 2,
     details: [
-      { text: '1 Double bed', icon: <BedDouble size={16} /> },
-      { text: 'Outside attached washroom', icon: <Bath size={16} /> },
-      { text: 'Up to 3 guests easily', icon: <Users size={16} /> }
+      { text: '1 King Size bed', icon: <BedDouble size={16} /> },
+      // { text: 'Outside attached washroom', icon: <Bath size={16} /> },
+      { text: 'Up to 3 guest (with extra mattresses)', icon: <Users size={16} /> }
     ]
   },
   {
     name: 'AC Cottage',
-    imgs: ['/assests/cottage.jpg', '/assests/glimpse5.jpg', '/assests/glimpse4.png'],
+    imgs: [
+      '/assests/cottageAC.jpg',
+      '/assests/cottageAC2.JPG',
+      '/assests/cottageAC3.JPG',
+      '/assests/cottageAC4.JPG',
+      '/assests/cottageAC5.JPG',
+      '/assests/cottageAC6.JPG'
+    ],
     count: 3,
     details: [
-      { text: '1 Double bed', icon: <BedDouble size={16} /> },
+      { text: '1 King Size bed', icon: <BedDouble size={16} /> },
       { text: '1 Single bed', icon: <BedSingle size={16} /> },
-      { text: 'Attached washroom', icon: <Bath size={16} /> },
-      { text: 'Up to 7-8 guests (with 2 extra mattresses)', icon: <Users size={16} /> }
+      // { text: 'Attached washroom', icon: <Bath size={16} /> },
+      { text: 'Up to 7-8 guest (with extra mattresses)', icon: <Users size={16} /> }
     ]
   },
+
   {
-    name: 'Dormitory Room',
-    imgs: ['/assests/glimpse1.jpg', '/assests/glimpse6.jpg', '/assests/doubleAC.jpg'],
-    count: 1,
-    details: [
-      { text: '4 Single beds', icon: <BedSingle size={16} /> },
-      { text: 'Attached washroom', icon: <Bath size={16} /> },
-      { text: 'Up to 8-9 guests (with 4 extra mattresses)', icon: <Users size={16} /> }
-    ]
+    name: 'Swimming Pool',
+    imgs: [
+      '/assests/sp.jpg',
+      '/assests/sp2.JPG',
+      '/assests/sp3.JPG',
+      '/assests/sp4.JPG',
+      '/assests/sp5.JPG',
+
+    ],
+    // count: 3,
+    // details: [
+    //   { text: '1 King Size bed', icon: <BedDouble size={16} /> },
+    //   { text: '1 Single bed', icon: <BedSingle size={16} /> },
+    //   // { text: 'Attached washroom', icon: <Bath size={16} /> },
+    //   { text: 'Up to 7-8 guest (with extra mattresses)', icon: <Users size={16} /> }
+    // ]
   },
+
+
+
+
+
+
+
 ];
 
 const containerVariants = {
@@ -135,34 +184,47 @@ const RoomCard = ({ r }) => {
 
       <div className="room-body" style={{ display: 'flex', flexDirection: 'column' }}>
         <h3 style={{ textAlign: 'center', width: '100%', display: 'block' }}>{r.name}</h3>
-        <p className="room-count" style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', width: '100%' }}>
-          <span className="room-count-dot">&#9679;</span>
-          {r.count} {r.count === 1 ? 'Room' : 'Rooms'} Available
-        </p>
+        {r.name !== 'Swimming Pool' && (
+          <p className="room-count" style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', width: '100%', color: 'green', fontWeight: 'bold' }}>
+            <span className="room-count-dot" style={{ backgroundColor: 'green' }}>&#9679;</span>
+            {r.count} {r.count === 1 ? 'Room' : 'Rooms'} Available
+          </p>
+        )}
 
-        <ul className="room-details-list with-icons" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '8px 12px', listStyle: 'none', padding: 0, margin: '16px 0' }}>
-          {r.details?.map((detail, idx) => (
-            <li key={idx}>
-              <span className="detail-icon">{detail.icon}</span>
-              {detail.text}
+        {r.name !== 'Swimming Pool' && (
+          <ul className="room-details-list with-icons" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '8px 12px', listStyle: 'none', padding: 0, margin: '16px 0' }}>
+            {r.details?.map((detail, idx) => (
+              <li key={idx}>
+                <span className="detail-icon">{detail.icon}</span>
+                {detail.text}
+              </li>
+            ))}
+            <li style={{ gridColumn: 'span 2' }}>
+              {/* <span className="detail-icon">
+                {/* <Wifi size={16} /> */}
+              {/* </span>
+              Amenities: Wifi, Tv, Water Bottle 2, Towel 2, Soap */}
+
+              <span className="detail-icon">
+                <List size={16} />
+              </span>
+              Amenities: Wifi, TV, Water Bottle 2, Towel 2, Soap
             </li>
-          ))}
-          <li>
-            <span className="detail-icon"><Wifi size={16} /></span>
-            Wi-Fi available
-          </li>
-        </ul>
+          </ul>
+        )}
 
-        <div className="room-footer centered">
-          <motion.a
-            className="btn-gold large-book-btn"
-            href="tel:08660205501"
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-          >
-            Book Now
-          </motion.a>
-        </div>
+        {r.name !== 'Swimming Pool' && (
+          <div className="room-footer centered">
+            <motion.a
+              className="btn-gold large-book-btn"
+              href="tel:08660205501"
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+            >
+              Book Now
+            </motion.a>
+          </div>
+        )}
       </div>
     </motion.div>
   );

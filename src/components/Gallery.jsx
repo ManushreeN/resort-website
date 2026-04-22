@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 
 const photos = [
@@ -8,6 +8,12 @@ const photos = [
   { src: '/assests/glimpse3.jpg', label: 'Glimpse 3' },
   { src: '/assests/glimpse5.jpg', label: 'Glimpse 5' },
   { src: '/assests/glimpse6.jpg', label: 'Glimpse 6' },
+  { src: '/assests/overview.jpg', label: 'Glimpse 7' },
+  { src: '/assests/overview2.jpg', label: 'Glimpse 8' },
+  { src: '/assests/overview3.jpg', label: 'Glimpse 9' },
+  { src: '/assests/overview4.jpg', label: 'Glimpse 10' },
+  { src: '/assests/overview5.jpg', label: 'Glimpse 11' },
+  { src: '/assests/overview6.jpg', label: 'Glimpse 12' },
 ];
 
 const headingVariants = {
@@ -15,16 +21,21 @@ const headingVariants = {
   visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: 'easeOut' } },
 };
 
-const getSlideVariant = (index) => ({
-  hidden: { opacity: 0, x: index % 2 === 0 ? -80 : 80 },
-  visible: {
-    opacity: 1,
-    x: 0,
-    transition: { duration: 0.65, ease: 'easeOut', delay: (index % 3) * 0.1 },
-  },
-});
-
 function Gallery() {
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  const goToPrevious = () => {
+    setCurrentIndex((prevIndex) => (prevIndex === 0 ? photos.length - 1 : prevIndex - 1));
+  };
+
+  const goToNext = () => {
+    setCurrentIndex((prevIndex) => (prevIndex === photos.length - 1 ? 0 : prevIndex + 1));
+  };
+
+  const goToSlide = (index) => {
+    setCurrentIndex(index);
+  };
+
   return (
     <div id="gallery" className="gallery-bg">
       <div className="gallery-inner">
@@ -53,21 +64,41 @@ function Gallery() {
           A Glimpse of Paradise
         </motion.h2>
 
-        <div className="gallery-grid">
-          {photos.map((p, index) => (
-            <motion.div
-              key={p.label}
-              className={p.wide ? 'wide' : ''}
-              variants={getSlideVariant(index)}
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: false, amount: 0.2 }}
-              style={{ overflow: 'hidden' }}
-              whileHover={{ scale: 1.03, transition: { duration: 0.25 } }}
-            >
-              <img src={p.src} alt={p.label} loading="lazy" style={{ width: '100%', display: 'block' }} />
-            </motion.div>
-          ))}
+        <div className="gallery-carousel">
+          <motion.div
+            className="carousel-container"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.5 }}
+          >
+            <img 
+              src={photos[currentIndex].src} 
+              alt={photos[currentIndex].label}
+              className="carousel-image"
+            />
+          </motion.div>
+
+          <button className="carousel-btn prev-btn" onClick={goToPrevious}>
+            ❮
+          </button>
+          <button className="carousel-btn next-btn" onClick={goToNext}>
+            ❯
+          </button>
+
+          <div className="carousel-indicators">
+            {photos.map((_, index) => (
+              <button
+                key={index}
+                className={`dot ${index === currentIndex ? 'active' : ''}`}
+                onClick={() => goToSlide(index)}
+                aria-label={`Go to slide ${index + 1}`}
+              />
+            ))}
+          </div>
+
+          <div className="carousel-counter">
+            {currentIndex + 1} / {photos.length}
+          </div>
         </div>
       </div>
     </div>
