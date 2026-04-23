@@ -254,16 +254,17 @@ h3 {
   object-fit: cover;
 }
 
-/* ---- About Section: Dancing Script — Charlie/Wendy/Sophie cursive style ---- */
+/* ---- About Section: Normal Bold Font ---- */
 .about-text .about-para,
 .about-text p {
-  font-family: 'Dancing Script', cursive;
+  font-family: Arial, sans-serif;
   color: #555;
-  font-weight: 600;
+  font-weight: 200;
   font-size: 1.2rem;
   line-height: 1.9;
   margin-bottom: 0px;
   letter-spacing: 0.01em;
+  text-align: justify;
 }
 
 .features-list {
@@ -277,10 +278,10 @@ h3 {
   display: flex;
   align-items: flex-start;
   gap: 8px;
-  font-family: 'Dancing Script', cursive;
+  font-family: Arial, sans-serif;
   font-size: 1.2rem;
   color: #555;
-  font-weight: 600;
+  font-weight: 200;
   line-height: 1.9;
   letter-spacing: 0.01em;
 }
@@ -336,6 +337,16 @@ h3 {
   height: 100%;
   object-fit: cover;
   display: block;
+}
+
+.carousel-dots {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 12px;
+  z-index: 10;
 }
 
 .carousel-btn {

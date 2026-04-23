@@ -69,12 +69,13 @@ const rooms = [
     name: 'AC Cottage',
     imgs: [
       // '/assests/cottageAC3.jpg',
+      '/assests/cottageAC6.JPG',
+       '/assests/cottageAC9.JPG',
       '/assests/cottageAC4.JPG',
       '/assests/cottageAC5.JPG',
-      '/assests/cottageAC6.JPG',
       '/assests/cottageAC7.JPG',
       '/assests/cottageAC8.JPG',
-      '/assests/cottageAC9.JPG',
+     
       '/assests/cottageAC10.JPG',
       '/assests/cottageAC11.JPG',
       '/assests/cottageAC2.JPG'
@@ -238,7 +239,7 @@ function Rooms() {
 
         <div
           className="rooms-summary"
-          style={{ backgroundImage: "url('/assests/container.jpg')" }}
+          style={{ backgroundImage: "url('/assests/container.jpeg')" }}
         >
           <div className="summary-box">
             <h2>14</h2>
