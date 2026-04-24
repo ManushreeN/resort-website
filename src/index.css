@@ -304,7 +304,7 @@ h3 {
 /* Gallery */
 .gallery-bg {
   background: #fff;
-  padding: 20px 0 20px;
+  padding: 0px 0;
   overflow-x: hidden;
 }
 
