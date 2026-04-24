@@ -917,7 +917,7 @@ footer {
 
   /* Sections */
   .section {
-    padding: 50px 20px;
+    padding: 30px 20px;
   }
 
   .gallery-bg,
@@ -927,7 +927,7 @@ footer {
 
   .gallery-inner,
   .rooms-inner {
-    padding: 40px 16px;
+    padding: 20px 16px;
   }
 
   /* About */
