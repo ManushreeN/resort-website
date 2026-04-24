@@ -208,7 +208,7 @@ h3 {
 
 /* Sections */
 .section {
-  padding: 60px 40px;
+  padding: 30px 40px;
   max-width: 1100px;
   margin: 0 auto;
 }
@@ -268,10 +268,11 @@ h3 {
 }
 
 .features-list {
-  margin-top: 0px;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 10px;
+  margin-top: 15px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px 30px;
+  justify-content: flex-start;
 }
 
 .feat {
@@ -279,11 +280,12 @@ h3 {
   align-items: flex-start;
   gap: 8px;
   font-family: Arial, sans-serif;
-  font-size: 1.2rem;
+  font-size: 1rem;
   color: #555;
   font-weight: 500;
-  line-height: 1.9;
+  line-height: 1.6;
   letter-spacing: 0.01em;
+  flex: 0 1 calc(50% - 15px);
 }
 
 .feat::before {
@@ -938,9 +940,14 @@ footer {
   }
 
   .features-list {
-    grid-template-columns: 1fr 1.1fr;
-    gap: 15px;
-    margin-top: -8px;
+    flex-wrap: wrap;
+    gap: 12px 20px;
+    margin-top: 15px;
+  }
+
+  .feat {
+    flex: 0 1 calc(50% - 10px);
+    font-size: 0.95rem;
   }
 
   .about-text .about-para,
@@ -1079,7 +1086,11 @@ footer {
 /* Very small screens */
 @media (max-width: 360px) {
   .features-list {
-    grid-template-columns: 1fr;
+    flex-direction: column;
+  }
+
+  .feat {
+    flex: 0 1 100%;
   }
 
   .navbar .logo {
