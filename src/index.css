@@ -268,11 +268,10 @@ h3 {
 }
 
 .features-list {
-  margin-top: 15px;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px 30px;
-  justify-content: flex-start;
+  margin-top: 20px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px 40px;
 }
 
 .feat {
@@ -283,10 +282,12 @@ h3 {
   font-size: 1rem;
   color: #555;
   font-weight: 500;
-  line-height: 1.6;
+  line-height: 1.5;
   letter-spacing: 0.01em;
-  flex: 0 1 auto;
-  white-space: nowrap;
+}
+
+.feat:last-child {
+  grid-column: 1 / -1;
 }
 
 .feat::before {
@@ -426,7 +427,7 @@ h3 {
 /* Rooms */
 .rooms-bg {
   background: #fff;
-  padding: 40px 0;
+  padding: 20px 0;
   overflow-x: hidden;
 }
 

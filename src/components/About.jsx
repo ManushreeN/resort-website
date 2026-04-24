@@ -119,16 +119,21 @@ function About() {
               natural setting, it’s an ideal destination for families, couples, and groups seeking to unwind and rejuvenate.
             </p>
             <h3 style={{ marginTop: '20px', marginBottom: '15px' }}> Experiences & Activities ✨</h3>
+
+          
+
             <motion.div
               className="features-list"
               variants={featureContainer}
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true, amount: 0.3 }}
+              
             >
               {features.map((f) => (
                 <motion.div className="feat" key={f.text} variants={featureItem}>
                   <span>{f.text}</span>
+                  
                 </motion.div>
               ))}
             </motion.div>
