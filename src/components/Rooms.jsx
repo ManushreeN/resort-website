@@ -31,6 +31,7 @@ const rooms = [
     count: 4,
     details: [
       { text: '2 King Size bed', icon: <BedDouble size={16} /> },
+      {text : '1 Double Bed ', icon:<BedDouble size={16}/>},
       { text: '1 Single bed', icon: <BedSingle size={16} /> },
       { text: 'Up to 3-4 guests (with extra mattresses)', icon: <Users size={16} /> }
     ]
